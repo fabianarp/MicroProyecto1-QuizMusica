@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Música</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Orbitron:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quiz de Música</h1>
+        
+        <!-- Menú de inicio -->
+        <div id="menu-inicio">
+            <h2>Bienvenido al Quiz de Música</h2>
+            <p>Responde 10 preguntas sobre música en 5 minutos. ¡Demuestra tus conocimientos!</p>
+            
+            <div>
+                <label for="usuario-input">Ingresa tu nombre:</label>
+                <input type="text" id="usuario-input" placeholder="Tu nombre">
+            </div>
+            
+            <button id="iniciar-btn">Iniciar Quiz</button>
+            
+            <h3>Ranking de Puntajes</h3>
+            <table id="ranking-table">
+                <thead>
+                    <tr>
+                        <th>Posición</th>
+                        <th>Nombre</th>
+                        <th>Puntaje</th>
+                        <th>Fecha</th>
+                    </tr>
+                </thead>
+                <tbody id="ranking-body">
+                    <!-- Las filas se agregarán dinámicamente con JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Contenedor del quiz -->
+        <div id="quiz-container">
+            <div id="temporizador">05:00</div>
+            
+            <div id="pregunta-container">
+                <h2 id="pregunta-texto">Pregunta aparecerá aquí</h2>
+                <div id="opciones-container">
+                    <!-- Las opciones se agregarán dinámicamente con JavaScript -->
+                </div>
+            </div>
+            
+            <button id="siguiente-btn" style="display: none;">Siguiente</button>
+        </div>
+        
+        <!-- Contenedor de resultados -->
+        <div id="resultados-container">
+            <h2>Resultados</h2>
+            <p id="resultado-texto">Tu puntaje aparecerá aquí</p>
+            
+            <div id="detalles-resultados">
+                <!-- Los detalles de las respuestas se agregarán dinámicamente -->
+            </div>
+            
+            <button id="nuevo-quiz-btn">Nuevo Quiz</button>
+            <button id="volver-menu-btn">Volver al Menú</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
