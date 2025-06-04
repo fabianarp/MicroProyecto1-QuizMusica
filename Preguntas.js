@@ -92,37 +92,3 @@ const preguntas = [ //declaro variable constante preguntasMusica
     },
 ];
 
-let usuario = "";
-let preguntaActualI = 0;  //index de la pregunta actual
-let puntuacion = 0;
-let tiempo;
-let tiempoRestante = 300;  //5min en seg
-let preguntasSeleccionadas = [];
-
-
-
-
-function empezarQuiz() {
-    usuario = usuarioInput.value.trim(),
-    if (usuario === "") {
-        alert("Ingresa tu usuario para poder empezar el quiz");
-        return;
-    }
-
-}
-
-function reiniciarQuiz() {
-    preguntaActualI = 0;
-    puntuacion = 0;
-    tiempoRestante = 300;
-    clearInterval(tiempo); //Para temporizador anterior
-
-}
-
-
-
-function terminarQuiz(timedOut = false){
-    clearInterval(tiempo);
-    
-}
-
